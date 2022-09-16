@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<div class="container">
+
+   <h1 class="heading">type to search images</h1>
+
+   <input type="text" placeholder="search images" id="search-box">
+
+   <div class="image-container">
+
+      <div class="image" data-title="1th">
+         <img src="images6/000.PNG" alt="">
+         <h3>Recently Complete Project 1</h3>
+      </div>
+
+      
+
+      <div class="image" data-title="2th">
+         <img src="images6/1646747514737.jfif" alt="">
+         <h3>Recently Complete Project 2</h3>
+      </div>
+
+      <div class="image" data-title="3th">
+         <img src="images6/1647956237379.jfif" alt="">
+         <h3>Recently Complete Project 3</h3>
+      </div>
+
+      <div class="image" data-title="4th">
+         <img src="images6/1651936007833.jfif" alt="">
+         <h3>Recently Complete Project 4</h3>
+      </div>
+
+      <div class="image" data-title="5th">
+         <img src="images6/1659500515033.jfif" alt="">
+         <h3>Recently Complete Project 5</h3>
+      </div>
+      <div class="image" data-title="6th">
+         <img src="images6/1660109637039.jfif" alt="">
+         <h3>Recently Complete Project 6</h3>
+      </div>
+      <div class="image" data-title="7th">
+        <img src="images6/1661861150267.jfif" alt="">
+        <h3>Recently Complete Project 7</h3>
+     </div>
+     <div class="image" data-title="8th">
+        <img src="images6/78.PNG" alt="">
+        <h3>Recently Complete Project 8</h3>
+     </div>
+     <div class="image" data-title="9th">
+        <img src="images6/8888.PNG" alt="">
+        <h3>Recently Complete Project 9</h3>
+     </div>
+    
+   </div>
+
+</div>
+
+<script>
+
+let searchBox = document.querySelector('#search-box');
+let images = document.querySelectorAll('.container .image-container .image');
+
+searchBox.oninput = () =>{
+   images.forEach(hide => hide.style.display = 'none');
+   let value = searchBox.value;
+   images.forEach(filter =>{
+      let title = filter.getAttribute('data-title');
+      if(value == title){
+         filter.style.display = 'block';
+      }
+      if(searchBox.value == ''){
+         filter.style.display = 'block';
+      }
+   });
+};
+
+</script>
+
+</body>
+</html>
