@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<div class="container">
+
+   <h1 class="heading">type to search images</h1>
+
+   <input type="text" placeholder="search images" id="search-box">
+
+   <div class="image-container">
+
+      <div class="image" data-title="1th">
+         <img src="images/1st supply.PNG" alt="">
+         <h3>Recently Complete Project 1</h3>
+      </div>
+
+      
+
+      <div class="image" data-title="2th">
+         <img src="images/4th suplly.PNG" alt="">
+         <h3>Recently Complete Project 2</h3>
+      </div>
+
+      <div class="image" data-title="3th ">
+         <img src="images/5th supply.PNG" alt="">
+         <h3>Recently Complete Project 3</h3>
+      </div>
+
+      <div class="image" data-title="4th">
+         <img src="images/6th supply.PNG" alt="">
+         <h3>Recently Complete Project 4</h3>
+      </div>
+
+      <div class="image" data-title="5t">
+         <img src="images/7th supply.PNG" alt="">
+         <h3>Recently Complete Project 5</h3>
+      </div>
+
+      
+
+   </div>
+
+</div>
+
+<script>
+
+let searchBox = document.querySelector('#search-box');
+let images = document.querySelectorAll('.container .image-container .image');
+
+searchBox.oninput = () =>{
+   images.forEach(hide => hide.style.display = 'none');
+   let value = searchBox.value;
+   images.forEach(filter =>{
+      let title = filter.getAttribute('data-title');
+      if(value == title){
+         filter.style.display = 'block';
+      }
+      if(searchBox.value == ''){
+         filter.style.display = 'block';
+      }
+   });
+};
+
+</script>
+
+</body>
+</html>

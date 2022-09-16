@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<div class="container">
+
+   <h1 class="heading">type to search images</h1>
+
+   <input type="text" placeholder="search images" id="search-box">
+
+   <div class="image-container">
+
+      <div class="image" data-title="1th">
+         <img src="images2/1 supply.PNG" alt="">
+         <h3>Recently Complete Project 1</h3>
+      </div>
+
+      
+
+      <div class="image" data-title="2th">
+         <img src="images2/1 supply.PNG" alt="">
+         <h3>Recently Complete Project 2</h3>
+      </div>
+
+      <div class="image" data-title="3th">
+         <img src="images2/2 supply.jpg" alt="">
+         <h3>Recently Complete Project 3</h3>
+      </div>
+
+      <div class="image" data-title="4th">
+         <img src="images2/3 supply.jpg" alt="">
+         <h3>Recently Complete Project 4</h3>
+      </div>
+
+      <div class="image" data-title="5th">
+         <img src="images2/4 supply.jpg" alt="">
+         <h3>Recently Complete Project 5</h3>
+      </div>
+      <div class="image" data-title="6th">
+         <img src="images2/5 supply.jpg" alt="">
+         <h3>Recently Complete Project 6</h3>
+      </div>
+      <div class="image" data-title="6th">
+        <img src="images2/6 supply.jpg" alt="">
+        <h3>Recently Complete Project 6</h3>
+     </div>
+     <div class="image" data-title="7th">
+        <img src="images2/7 supply.jpg" alt="">
+        <h3>Recently Complete Project 7</h3>
+     </div>
+     <div class="image" data-title="8th">
+        <img src="images2/8 supply.jpg" alt="">
+        <h3>Recently Complete Project </h3>
+     </div>
+     <div class="image" data-title="9th">
+        <img src="images2/9 supply.jpg" alt="">
+        <h3>Recently Complete Project 9</h3>
+     </div>
+     <div class="image" data-title="10th">
+        <img src="images2/10 supply.jpg" alt="">
+        <h3>Recently Complete Project 10</h3>
+     </div>
+     <div class="image" data-title="11th">
+        <img src="images2/11 supply.jpg" alt="">
+        <h3>Recently Complete Project 11</h3>
+     </div>
+     <div class="image" data-title="12th">
+      <img src="images2/12 supply.jpg" alt="">
+      <h3>Recently Complete Project 12</h3>
+   </div>
+   <div class="image" data-title="13th">
+      <img src="images2/13 supply.jpg" alt="">
+      <h3>Recently Complete Project 13</h3>
+   </div>
+   <div class="image" data-title="14th">
+      <img src="images2/14 supply.jpg" alt="">
+      <h3>Recently Complete Project 14</h3>
+   </div>
+   <div class="image" data-title="15th">
+      <img src="images2/15 supply.jpg" alt="">
+      <h3>Recently Complete Project 15</h3>
+   </div>
+   <div class="image" data-title="16th">
+      <img src="images2/16 supply.jpg" alt="">
+      <h3>Recently Complete Project 16</h3>
+   </div>
+   <div class="image" data-title="17th">
+      <img src="images2/17 supply.jpg" alt="">
+      <h3>Recently Complete Project 17</h3>
+   </div>
+   <div class="image" data-title="18th">
+      <img src="images2/18 supply.jpg" alt="">
+      <h3>Recently Complete Project 18</h3>
+   </div>
+   <div class="image" data-title="19th">
+      <img src="images2/19 supply.jpg" alt="">
+      <h3>Recently Complete Project 19</h3>
+   </div>
+   <div class="image" data-title="20th">
+      <img src="images2/20 supply.jpg" alt="">
+      <h3>Recently Complete Project 20</h3>
+   </div>
+   <div class="image" data-title="21th">
+      <img src="images2/21 supply.jpg" alt="">
+      <h3>Recently Complete Project 21</h3>
+   </div>
+   <div class="image" data-title="23th">
+      <img src="images2/23 supply.jpg" alt="">
+      <h3>Recently Complete Project 23</h3>
+   </div>
+   <div class="image" data-title="24th">
+      <img src="images2/24 supply.PNG" alt="">
+      <h3>Recently Complete Project 24</h3>
+   </div>
+   </div>
+
+</div>
+
+<script>
+
+let searchBox = document.querySelector('#search-box');
+let images = document.querySelectorAll('.container .image-container .image');
+
+searchBox.oninput = () =>{
+   images.forEach(hide => hide.style.display = 'none');
+   let value = searchBox.value;
+   images.forEach(filter =>{
+      let title = filter.getAttribute('data-title');
+      if(value == title){
+         filter.style.display = 'block';
+      }
+      if(searchBox.value == ''){
+         filter.style.display = 'block';
+      }
+   });
+};
+
+</script>
+
+</body>
+</html>
